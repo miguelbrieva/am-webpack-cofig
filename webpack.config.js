@@ -9,20 +9,21 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
   },
   devtool: 'inline-source-map',
   mode: 'development',
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.m?js$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ["es2015", "stage-0"],
-          }
-        }
+            presets: ['es2015', 'stage-0'],
+          },
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -33,10 +34,9 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               includePaths: ['./node_modules'],
-            }
+            },
           },
-          
-        ]
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -44,10 +44,10 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: "images/[name].[ext]"
-            }
-          }
-        ]
+              name: 'images/[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(html)$/,
@@ -57,14 +57,14 @@ module.exports = {
             options: {
               minimize: true,
               removeComments: true,
-            }
-          }  
-        ]
-      }
-    ]
+            },
+          },
+        ],
+      },
+    ],
   },
   optimization: {
-    usedExports: true
+    usedExports: true,
   },
   output: {
     filename: '[name].js',
@@ -73,7 +73,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      favicon: 'src/favicon.ico',
+      favicon: 'src/B.ico',
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),

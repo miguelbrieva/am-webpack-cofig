@@ -13,15 +13,16 @@ module.exports = {
   },
   mode: 'production',
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.m?js$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ["es2015", "stage-0"],
-          }
-        }
+            presets: ['es2015', 'stage-0'],
+          },
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -33,10 +34,9 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               includePaths: ['./node_modules'],
-            }
+            },
           },
-          
-        ]
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -44,10 +44,10 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: "images/[name].[hash:8].[ext]"
-            }
-          }
-        ]
+              name: 'images/[name].[hash:8].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(html)$/,
@@ -57,18 +57,18 @@ module.exports = {
             options: {
               minimize: true,
               removeComments: true,
-            }
-          }  
-        ]
-      }
-    ]
+            },
+          },
+        ],
+      },
+    ],
   },
   optimization: {
     usedExports: true,
     runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
-    }
+    },
   },
   output: {
     chunkFilename: 'chunks/[name].[contenthash:8].js',
@@ -78,11 +78,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash:8].css',
-      chunkFilename: '[id].[chunkhash:8].css'
+      chunkFilename: '[id].[chunkhash:8].css',
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      favicon: 'src/favicon.ico',
+      favicon: 'src/B.ico',
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),

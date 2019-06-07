@@ -1,7 +1,7 @@
 {
-  "name": "escuela_audiomusica",
+  "name": "webpack_config",
   "version": "0.0.1",
-  "description": "Sitio web Escuela Audiomusica",
+  "description": "Basic webpack configuration for AM projects.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
