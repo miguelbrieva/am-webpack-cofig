@@ -38,12 +38,5 @@
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.2.1"
-  },
-  "dependencies": {
-    "@material/checkbox": "^0.44.1",
-    "@material/notched-outline": "^0.44.1",
-    "@material/select": "^0.44.1",
-    "@material/textfield": "^0.44.1",
-    "page": "^1.11.4"
   }
 }

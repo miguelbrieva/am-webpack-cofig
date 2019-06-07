@@ -85,6 +85,5 @@ module.exports = {
       favicon: 'src/B.ico',
     }),
     new CleanWebpackPlugin(['dist']),
-    new webpack.HotModuleReplacementPlugin(),
   ],
 };
