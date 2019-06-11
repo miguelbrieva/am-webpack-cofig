@@ -3,7 +3,7 @@ node_modules/
 jspm_packages/
 
 # OS genereted files
-.DS_Store-
+.DS_Store
 
 # Webpack production folder
 /dist

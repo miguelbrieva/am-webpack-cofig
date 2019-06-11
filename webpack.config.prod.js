@@ -39,7 +39,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpe?g|gif)$/,
         use: [
           {
             loader: 'file-loader',
@@ -57,6 +57,7 @@ module.exports = {
             options: {
               minimize: true,
               removeComments: true,
+              attrs: ['img:src', 'source:srcset'],
             },
           },
         ],
@@ -82,7 +83,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      favicon: 'src/B.ico',
+      favicon: 'src/assets/b.ico',
     }),
     new CleanWebpackPlugin(['dist']),
   ],
